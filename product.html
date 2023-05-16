@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Kamran Mubarik">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>I-Merchand Informatics Shop</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- FancyBox -->
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+		<script>
+		$(document).ready(function(){		
+			$('.fancybox').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+		});
+
+  		</script>
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">I-Merchand</p>
+							<p class="small-logo">Informatics shop</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">My Account</a></li>
+								<li><a href="orders.html">My Orders</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.png"></td>
+										<td>product name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.png"></td>
+										<td>product name</td>
+										<td class="center">1200</td>
+										<td class="center">2</td>
+										<td class="center">2400</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="shop.html">Catalog</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="Search">
+							<img src="img/icons/search.png">
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li> / </li>
+					<li><a href="">Catalog</a></li>
+					<li> / </li>
+					<li><a href="">Product</a></li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+
+			<div class="single-product">
+				<div class="images-section">
+					<div class="larg-img">
+						<img src="img/product/img1.png">
+					</div>
+					<div class="small-img">
+						<a class="fancybox" rel="group" href="img/product/img2.jpg">
+							<img src="img/product/img2.jpg">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img3.jpg">
+							<img src="img/product/img3.jpg">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img4.jpg">
+							<img src="img/product/img4.jpg">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img5.jpg">
+							<img src="img/product/img5.jpg">
+						</a>
+					</div>
+				</div> <!-- End of Images Section-->
+
+				<div class="product-detail">
+					<div class="product-name">
+						<h2>Korsa Informatika</h2>
+					</div>
+					<div class="product-price">
+						<h3>Rp.145000/-</h3>
+					</div>
+					<hr>
+					<div class="product-description">
+						<p>Korsa adalah seragam yang digunakan untuk menunjukkan identitas kita sebagai bagian dari kelompok atau organisasi. Dalam prakteknya, korsa digunakan ketika ada acara atau kegiatan baik kegiatan internal maupun eksternal.</p>
+					</div>
+					<hr>
+					<div class="product-cart">
+						<form action="cart.html" id="cart-form" 
+						method="POST">
+							<div class="form-group">
+								<input type="number" class="cart-number" name="cartNumber" value="1" min="1" max="100">
+								<input type="submit" name="addToCart" value="Add To Cart">
+							</div>
+						</form>
+						<form id="wishlist-form">
+							<div class="form-group">
+								<input type="checkbox" class="wishlist" name="wishlist"> Add To Wishlist
+							</div>
+						</form>
+					</div>
+					<hr>
+					<div class="product-meta">
+						<p><b>Category: </b> Product</p>
+						<p><b>Share This Product: </b> Facebook, Twitter, Instagram, Tiktok</p>
+					</div>
+				</div> <!-- End of Product Detail-->
+			</div>
+			<hr>
+			<div class="product-long-description">
+				<h3>Product Description</h3>
+				<p>
+					<br>Spesifikasi Kemeja PDL</br>
+					</p>* Bahan : DRILL (Berkualitas)/American Drill-Venoza</p>
+					</p>* Bahan Nyaman Dipakai Enak Dilihat</p>
+					</p>* Kualitas Super dengan Harga Murah</p>
+					</p>* Harga sesuai kualitas Karena Langsung di tempat Produksi langsung</p>
+					</p>* siapkan format jpg/pdf : Text,Logo,dll</p>
+
+					<br>Keterangan:</br>
+					</p>P= tinggi kemeja (diukur dari kerah sampai ke bawah)</p>
+					</p>L= Lebar bahu/pundak (diukur bahu ke bahu)</p>
+					</p>P. Lengan = Panjang lengan (diukur dari jahitan ujung pundak ke ujung lengan)</p>
+
+					<br>Size Chart</br>
+					</p>S (Lebar: 51cm, Panjang: 69cm, Tangan: 58cm)</p>
+					</p>M (Lebar: 54cm, Panjang: 72cm, Tangan: 61cm)</p>
+					</p>L (Lebar: 56cm, Panjang: 75cm, Tangan: 63cm)</p>
+					</p>XL (Lebar: 58cm, Panjang: 77cm, Tangan: 66cm)</p>
+					</p>XXL (Lebar: 60cm, Panjang: 80cm, Tangan: 68cm)</p>
+					</p>XXXL (Lebar: 62cm, Panjang: 82cm, Tangan: 71cm)</p> 
+				</p>
+				
+			</div>
+			<hr>
+			<div class="new-product-section">
+				<div class="product-section-heading">
+					<h2>Recommend Products <img src="img/icons/good_quality.png"></h2>
+					<h3>OUR BEST PRODUCTS RECOMMENDED FOR YOU</h3>
+				</div>
+				<div class="product-content">
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img1.png">
+						</a>
+						<div class="product-detail">
+							<h3>Unisex / Korsa</h3>
+							<h2>Korsa Informatika</h2>
+							<a href="cart.html">Add to Cart</a>
+							<p>Rp.145000/-</p>
+						</div>						
+					</div>
+					<div class="product">
+						<a href="product2.html">
+							<img src="img/product/img2.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Unisex / Hoodie</h3>
+							<h2>Informatics Hoodie</h2>
+							<a href="cart.html">Add to Cart</a>
+							<p>Rp.150000/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product3.html">
+							<img src="img/product/img3.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Uninsex / T-Shirt</h3>
+							<h2>Informatics T-Shirt</h2>
+							<a href="cart.html">Add to Cart</a>
+							<p>Rp.80000/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product4.html">
+							<img src="img/product/img4.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Unisex / Hat</h3>
+							<h2>Informatics Hat</h2>
+							<a href="cart.html">Add to Cart</a>
+							<p>>Rp.45000/-</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- Recommend Product Section -->
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Important Link</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="refund.html">Refund Policy</a></li>
+							<li><a href="terms.html">Terms & Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Information</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="account.html">My Account</a></li>
+							<li><a href="orders.html">My Orders</a></li>
+							<li><a href="cart.html">Cart</a></li>
+							<li><a href="checkout.html">Checkout</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Follow us</h3>
+					</div>
+					<div class="widget-content">
+						<div class="follow">
+							<ul>
+								<li><a href="#"><img src="img/icons/facebook.png"></a></li>
+								<li><a href="#"><img src="img/icons/twitter.png"></a></li>
+								<li><a href="#"><img src="img/icons/instagram.png"></a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="widget-heading">
+						<h3>Subscribe for Newsletter</h3>
+					</div>
+					<div class="widget-content">
+						<div class="subscribe">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" name="subscribe" placeholder="Email">
+									<img src="img/icons/paper_plane.png">
+								</div>
+							</form>
+						</div>						
+					</div>
+				</div>
+			</div> <!-- Footer Widget -->
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>Copyright 2021 - All Rights Reserved</p>
+				</div>
+				<div class="payment-mode">
+					<img src="img/icons/paper_money.png">
+					<img src="img/icons/visa.png">
+					<img src="img/icons/mastercard.png">
+				</div>
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+
+</html>
